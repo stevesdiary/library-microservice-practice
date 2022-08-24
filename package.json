@@ -1,0 +1,30 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevesdiary/library-microservice-practice.git"
+  },
+  "keywords": [
+    "book",
+    "library",
+    "node",
+    "microservice"
+  ],
+  "author": "Stephen Oyeyemi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevesdiary/library-microservice-practice/issues"
+  },
+  "homepage": "https://github.com/stevesdiary/library-microservice-practice#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "mongodb": "^4.9.0"
+  }
+}
