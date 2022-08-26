@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 // connect to database 
-mongoose.connect("mongodb+srv://microservice:abc789@cluster0.kmxki6p.mongodb.net/?retryWrites=true&w=majority", () => {
+mongoose.connect("mongodb+srv://process.env.DBUSER:process.env.PASSWORD@cluster0.kmxki6p.mongodb.net/?retryWrites=true&w=majority", () => {
    console.log('Customer database connected!')
 })
 // Load model
 require('./Customer')
-const Customer = mongoose.model("Customer")
+const Customer = mongoose.model("Customer") 
 
 app.post('/customer', (req, res) => {
    var newCustomer = {

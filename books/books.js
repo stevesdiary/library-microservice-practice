@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 require("./Book")
 const Book = mongoose.model("Book")
 //CONNECT TO DATABASE
-mongoose.connect("mongodb+srv://microservice:abc789@cluster0.kmxki6p.mongodb.net/?retryWrites=true&w=majority", ()=> {
+mongoose.connect("mongodb+srv://process.env.DBUSER:process.env.PASSWORD@cluster0.kmxki6p.mongodb.net/?retryWrites=true&w=majority", ()=> {
    console.log("Database is connected!");
 });
 // const client = new MongoClient(uri);
@@ -49,7 +49,7 @@ app.get('/books', (req, res) => {
    })
 })
 
-// get a book
+// get a book 
 
 app.get('/book/:id', (req, res)=> {
    Book.findById(req.params.id).then((book) => {
@@ -75,7 +75,6 @@ app.delete('/book/:id', (req, res)=> {
       }
    })
 })
-
 
 
 
